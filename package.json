@@ -1,0 +1,21 @@
+{
+  "name": "react-native-netscan",
+  "version": "1.0.0",
+  "description": "React Native modules for net scan and device port scan for Android.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivandisi/react-native-netscan-android.git"
+  },
+  "keywords": [
+    "React",
+    "Native",
+    "Android"
+  ],
+  "author": "Ivan Disirò",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/ivandisi/react-native-netscan-android/issues"
+  },
+  "homepage": "https://github.com/ivandisi/react-native-netscan-android"
+}
