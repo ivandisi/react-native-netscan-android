@@ -75,7 +75,7 @@ public class NetScanModule extends ReactContextBaseJavaModule{
   }
 
   @ReactMethod
-  public void findDevicesFromIp(final networkIp, final Promise promise) {
+  public void findDevicesFromIp(final String networkIp, final Promise promise) {
         SubnetDevices.fromIPAddress(networkIp).findDevices(new SubnetDevices.OnSubnetDeviceFound() {
             @Override
             public void onDeviceFound(Device device) {
