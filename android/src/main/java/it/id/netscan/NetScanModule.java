@@ -75,6 +75,32 @@ public class NetScanModule extends ReactContextBaseJavaModule{
   }
 
   @ReactMethod
+  public void findDevicesFromIp(final networkIp, final Promise promise) {
+        SubnetDevices.fromIPAddress(networkIp).findDevices(new SubnetDevices.OnSubnetDeviceFound() {
+            @Override
+            public void onDeviceFound(Device device) {
+            }
+
+            @Override
+            public void onFinished(ArrayList<Device> devicesFound) {
+                WritableArray list = Arguments.createArray();
+
+                for (Device device : devicesFound) {
+                    WritableMap d = new WritableNativeMap();
+
+                    d.putString("ip", device.ip);
+                    d.putString("mac", device.mac);
+                    d.putString("hostname", device.hostname);
+
+                list.pushMap(d);
+            }
+
+                promise.resolve(list);
+            }
+        });
+  }
+
+  @ReactMethod
   public void findDevices(final Promise promise) {
       SubnetDevices.fromLocalAddress().findDevices(new SubnetDevices.OnSubnetDeviceFound() {
           @Override

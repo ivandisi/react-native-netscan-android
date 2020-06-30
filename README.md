@@ -10,6 +10,9 @@ import NetScan from 'react-native-netscan';
 // Scan the network where the device is connected
 const result = await NetScan.findDevices();
 
+// Scan the network by Ip (for example 192.168.0.1)
+const result = await NetScan.findDevicesFromIp(ip);
+
 // Find a device Ip by MAC
 const result = await NetScan.findDeviceByMAC(MAC);
 
