@@ -76,6 +76,7 @@ public class NetScanModule extends ReactContextBaseJavaModule{
 
   @ReactMethod
   public void findDevicesFromIp(final String networkIp, final Promise promise) {
+    try {
         SubnetDevices.fromIPAddress(networkIp).findDevices(new SubnetDevices.OnSubnetDeviceFound() {
             @Override
             public void onDeviceFound(Device device) {
@@ -98,6 +99,10 @@ public class NetScanModule extends ReactContextBaseJavaModule{
                 promise.resolve(list);
             }
         });
+      } catch (Exception e) {
+        e.printStackTrace();
+        promise.resolve(null);
+      }
   }
 
   @ReactMethod
