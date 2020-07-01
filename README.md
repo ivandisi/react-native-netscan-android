@@ -24,4 +24,6 @@ const result = await NetScan.scanOpenTCPPorts(IP,timeout);
 const result = await NetScan.scanOpenUDPPorts(IP,timeout);
 ```
 
-This project use stealthcopter AndroidNetworkTools, for more information https://github.com/stealthcopter/AndroidNetworkTools
+Note, on some low end device, it could be necessary add android:largeHeap="true" in the Manifest
+
+This project use my forked repo of stealthcopter AndroidNetworkTools, for more information https://github.com/stealthcopter/AndroidNetworkTools
