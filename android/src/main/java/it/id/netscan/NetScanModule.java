@@ -48,7 +48,7 @@ public class NetScanModule extends ReactContextBaseJavaModule{
           SubnetDevices.fromLocalAddress().findDevices(new SubnetDevices.OnSubnetDeviceFound() {
               @Override
               public void onDeviceFound(Device device) {
-                  if (mac.toUpperCase().equals(device.mac)) {
+                  if (mac.toLowerCase().equals(device.mac)) {
                       SubnetDevices.fromLocalAddress().cancel();
                       
                       WritableMap d = new WritableNativeMap();
