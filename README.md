@@ -16,6 +16,7 @@ const result = await NetScan.findDevicesFromIp(ip);
 // Find a device Ip by MAC
 const result = await NetScan.findDeviceByMAC(MAC);
 
+const result = await NetScan.findDeviceByMACwithNetworkIP(ip, MAC);
 
 // Port Scan by IP (TCP)
 const result = await NetScan.scanOpenTCPPorts(IP,timeout);
