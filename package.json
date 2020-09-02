@@ -1,6 +1,6 @@
 {
   "name": "react-native-netscan",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Native modules for net scan and device port scan for Android.",
   "main": "index.js",
   "repository": {
